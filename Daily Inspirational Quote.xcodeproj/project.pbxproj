@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F4236B31D7677D300E2E376 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4236B21D7677D300E2E376 /* Global.swift */; };
+		1F49A9631D7A70D2007BCDDD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49A9621D7A70D2007BCDDD /* Config.swift */; };
+		1F49A9671D7A7350007BCDDD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49A9661D7A7350007BCDDD /* InfoViewController.swift */; };
+		1F49A9691D7A7681007BCDDD /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49A9681D7A7681007BCDDD /* AlertsViewController.swift */; };
+		1F5EAF501D6EB0E100237D91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF4F1D6EB0E100237D91 /* AppDelegate.swift */; };
+		1F5EAF521D6EB0E100237D91 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF511D6EB0E100237D91 /* MainViewController.swift */; };
+		1F5EAF551D6EB0E100237D91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EAF531D6EB0E100237D91 /* Main.storyboard */; };
+		1F5EAF581D6EB0E100237D91 /* Daily_Inspirational_Quote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF561D6EB0E100237D91 /* Daily_Inspirational_Quote.xcdatamodeld */; };
+		1F5EAF5A1D6EB0E100237D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EAF591D6EB0E100237D91 /* Assets.xcassets */; };
+		1F5EAF5D1D6EB0E100237D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EAF5B1D6EB0E100237D91 /* LaunchScreen.storyboard */; };
+		1F5EAF681D6EB0E100237D91 /* Daily_Inspirational_QuoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF671D6EB0E100237D91 /* Daily_Inspirational_QuoteTests.swift */; };
+		1F5EAF731D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF721D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift */; };
+		1FF0C3771D6FE7CA0027EB49 /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F5EAF641D6EB0E100237D91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F5EAF441D6EB0E100237D91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F5EAF4B1D6EB0E100237D91;
+			remoteInfo = "Daily Inspirational Quote";
+		};
+		1F5EAF6F1D6EB0E100237D91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F5EAF441D6EB0E100237D91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F5EAF4B1D6EB0E100237D91;
+			remoteInfo = "Daily Inspirational Quote";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F4236B21D7677D300E2E376 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = ../Global.swift; sourceTree = "<group>"; };
+		1F49A9621D7A70D2007BCDDD /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		1F49A9661D7A7350007BCDDD /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		1F49A9681D7A7681007BCDDD /* AlertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
+		1F5EAF4C1D6EB0E100237D91 /* Daily Inspirational Quote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Inspirational Quote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5EAF4F1D6EB0E100237D91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F5EAF511D6EB0E100237D91 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1F5EAF541D6EB0E100237D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F5EAF571D6EB0E100237D91 /* Daily_Inspirational_Quote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Daily_Inspirational_Quote.xcdatamodel; sourceTree = "<group>"; };
+		1F5EAF591D6EB0E100237D91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F5EAF5C1D6EB0E100237D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F5EAF5E1D6EB0E100237D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F5EAF631D6EB0E100237D91 /* Daily Inspirational QuoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Daily Inspirational QuoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5EAF671D6EB0E100237D91 /* Daily_Inspirational_QuoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_Inspirational_QuoteTests.swift; sourceTree = "<group>"; };
+		1F5EAF691D6EB0E100237D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F5EAF6E1D6EB0E100237D91 /* Daily Inspirational QuoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Daily Inspirational QuoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5EAF721D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_Inspirational_QuoteUITests.swift; sourceTree = "<group>"; };
+		1F5EAF741D6EB0E100237D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F5EAF491D6EB0E100237D91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5EAF601D6EB0E100237D91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5EAF6B1D6EB0E100237D91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F5EAF431D6EB0E100237D91 = {
+			isa = PBXGroup;
+			children = (
+				1FF0C3751D6FE79F0027EB49 /* Supporting Files */,
+				1F5EAF4E1D6EB0E100237D91 /* Daily Inspirational Quote */,
+				1F5EAF661D6EB0E100237D91 /* Daily Inspirational QuoteTests */,
+				1F5EAF711D6EB0E100237D91 /* Daily Inspirational QuoteUITests */,
+				1F5EAF4D1D6EB0E100237D91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F5EAF4D1D6EB0E100237D91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F5EAF4C1D6EB0E100237D91 /* Daily Inspirational Quote.app */,
+				1F5EAF631D6EB0E100237D91 /* Daily Inspirational QuoteTests.xctest */,
+				1F5EAF6E1D6EB0E100237D91 /* Daily Inspirational QuoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F5EAF4E1D6EB0E100237D91 /* Daily Inspirational Quote */ = {
+			isa = PBXGroup;
+			children = (
+				1F49A9661D7A7350007BCDDD /* InfoViewController.swift */,
+				1F49A9681D7A7681007BCDDD /* AlertsViewController.swift */,
+				1F49A9621D7A70D2007BCDDD /* Config.swift */,
+				1F4236B21D7677D300E2E376 /* Global.swift */,
+				1F5EAF4F1D6EB0E100237D91 /* AppDelegate.swift */,
+				1F5EAF511D6EB0E100237D91 /* MainViewController.swift */,
+				1F5EAF531D6EB0E100237D91 /* Main.storyboard */,
+				1F5EAF591D6EB0E100237D91 /* Assets.xcassets */,
+				1F5EAF5B1D6EB0E100237D91 /* LaunchScreen.storyboard */,
+				1F5EAF5E1D6EB0E100237D91 /* Info.plist */,
+				1F5EAF561D6EB0E100237D91 /* Daily_Inspirational_Quote.xcdatamodeld */,
+			);
+			path = "Daily Inspirational Quote";
+			sourceTree = "<group>";
+		};
+		1F5EAF661D6EB0E100237D91 /* Daily Inspirational QuoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F5EAF671D6EB0E100237D91 /* Daily_Inspirational_QuoteTests.swift */,
+				1F5EAF691D6EB0E100237D91 /* Info.plist */,
+			);
+			path = "Daily Inspirational QuoteTests";
+			sourceTree = "<group>";
+		};
+		1F5EAF711D6EB0E100237D91 /* Daily Inspirational QuoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F5EAF721D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift */,
+				1F5EAF741D6EB0E100237D91 /* Info.plist */,
+			);
+			path = "Daily Inspirational QuoteUITests";
+			sourceTree = "<group>";
+		};
+		1FF0C3751D6FE79F0027EB49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F5EAF4B1D6EB0E100237D91 /* Daily Inspirational Quote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5EAF771D6EB0E100237D91 /* Build configuration list for PBXNativeTarget "Daily Inspirational Quote" */;
+			buildPhases = (
+				1F5EAF481D6EB0E100237D91 /* Sources */,
+				1F5EAF491D6EB0E100237D91 /* Frameworks */,
+				1F5EAF4A1D6EB0E100237D91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Daily Inspirational Quote";
+			productName = "Daily Inspirational Quote";
+			productReference = 1F5EAF4C1D6EB0E100237D91 /* Daily Inspirational Quote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F5EAF621D6EB0E100237D91 /* Daily Inspirational QuoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5EAF7A1D6EB0E100237D91 /* Build configuration list for PBXNativeTarget "Daily Inspirational QuoteTests" */;
+			buildPhases = (
+				1F5EAF5F1D6EB0E100237D91 /* Sources */,
+				1F5EAF601D6EB0E100237D91 /* Frameworks */,
+				1F5EAF611D6EB0E100237D91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F5EAF651D6EB0E100237D91 /* PBXTargetDependency */,
+			);
+			name = "Daily Inspirational QuoteTests";
+			productName = "Daily Inspirational QuoteTests";
+			productReference = 1F5EAF631D6EB0E100237D91 /* Daily Inspirational QuoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F5EAF6D1D6EB0E100237D91 /* Daily Inspirational QuoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5EAF7D1D6EB0E100237D91 /* Build configuration list for PBXNativeTarget "Daily Inspirational QuoteUITests" */;
+			buildPhases = (
+				1F5EAF6A1D6EB0E100237D91 /* Sources */,
+				1F5EAF6B1D6EB0E100237D91 /* Frameworks */,
+				1F5EAF6C1D6EB0E100237D91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F5EAF701D6EB0E100237D91 /* PBXTargetDependency */,
+			);
+			name = "Daily Inspirational QuoteUITests";
+			productName = "Daily Inspirational QuoteUITests";
+			productReference = 1F5EAF6E1D6EB0E100237D91 /* Daily Inspirational QuoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F5EAF441D6EB0E100237D91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Kraftwerking LLC";
+				TargetAttributes = {
+					1F5EAF4B1D6EB0E100237D91 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					1F5EAF621D6EB0E100237D91 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 1F5EAF4B1D6EB0E100237D91;
+					};
+					1F5EAF6D1D6EB0E100237D91 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 1F5EAF4B1D6EB0E100237D91;
+					};
+				};
+			};
+			buildConfigurationList = 1F5EAF471D6EB0E100237D91 /* Build configuration list for PBXProject "Daily Inspirational Quote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F5EAF431D6EB0E100237D91;
+			productRefGroup = 1F5EAF4D1D6EB0E100237D91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F5EAF4B1D6EB0E100237D91 /* Daily Inspirational Quote */,
+				1F5EAF621D6EB0E100237D91 /* Daily Inspirational QuoteTests */,
+				1F5EAF6D1D6EB0E100237D91 /* Daily Inspirational QuoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F5EAF4A1D6EB0E100237D91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5EAF5D1D6EB0E100237D91 /* LaunchScreen.storyboard in Resources */,
+				1F5EAF5A1D6EB0E100237D91 /* Assets.xcassets in Resources */,
+				1F5EAF551D6EB0E100237D91 /* Main.storyboard in Resources */,
+				1FF0C3771D6FE7CA0027EB49 /* Quotes.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5EAF611D6EB0E100237D91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5EAF6C1D6EB0E100237D91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F5EAF481D6EB0E100237D91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5EAF521D6EB0E100237D91 /* MainViewController.swift in Sources */,
+				1F5EAF581D6EB0E100237D91 /* Daily_Inspirational_Quote.xcdatamodeld in Sources */,
+				1F49A9691D7A7681007BCDDD /* AlertsViewController.swift in Sources */,
+				1F4236B31D7677D300E2E376 /* Global.swift in Sources */,
+				1F5EAF501D6EB0E100237D91 /* AppDelegate.swift in Sources */,
+				1F49A9671D7A7350007BCDDD /* InfoViewController.swift in Sources */,
+				1F49A9631D7A70D2007BCDDD /* Config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5EAF5F1D6EB0E100237D91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5EAF681D6EB0E100237D91 /* Daily_Inspirational_QuoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5EAF6A1D6EB0E100237D91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5EAF731D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F5EAF651D6EB0E100237D91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F5EAF4B1D6EB0E100237D91 /* Daily Inspirational Quote */;
+			targetProxy = 1F5EAF641D6EB0E100237D91 /* PBXContainerItemProxy */;
+		};
+		1F5EAF701D6EB0E100237D91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F5EAF4B1D6EB0E100237D91 /* Daily Inspirational Quote */;
+			targetProxy = 1F5EAF6F1D6EB0E100237D91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F5EAF531D6EB0E100237D91 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F5EAF541D6EB0E100237D91 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F5EAF5B1D6EB0E100237D91 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F5EAF5C1D6EB0E100237D91 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F5EAF751D6EB0E100237D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F5EAF761D6EB0E100237D91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F5EAF781D6EB0E100237D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Daily Inspirational Quote/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kraftwerking.Daily-Inspirational-Quote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F5EAF791D6EB0E100237D91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Daily Inspirational Quote/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kraftwerking.Daily-Inspirational-Quote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1F5EAF7B1D6EB0E100237D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Daily Inspirational QuoteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kraftwerking.Daily-Inspirational-QuoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daily Inspirational Quote.app/Daily Inspirational Quote";
+			};
+			name = Debug;
+		};
+		1F5EAF7C1D6EB0E100237D91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Daily Inspirational QuoteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kraftwerking.Daily-Inspirational-QuoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daily Inspirational Quote.app/Daily Inspirational Quote";
+			};
+			name = Release;
+		};
+		1F5EAF7E1D6EB0E100237D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Daily Inspirational QuoteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kraftwerking.Daily-Inspirational-QuoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Daily Inspirational Quote";
+			};
+			name = Debug;
+		};
+		1F5EAF7F1D6EB0E100237D91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Daily Inspirational QuoteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kraftwerking.Daily-Inspirational-QuoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Daily Inspirational Quote";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F5EAF471D6EB0E100237D91 /* Build configuration list for PBXProject "Daily Inspirational Quote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5EAF751D6EB0E100237D91 /* Debug */,
+				1F5EAF761D6EB0E100237D91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F5EAF771D6EB0E100237D91 /* Build configuration list for PBXNativeTarget "Daily Inspirational Quote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5EAF781D6EB0E100237D91 /* Debug */,
+				1F5EAF791D6EB0E100237D91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F5EAF7A1D6EB0E100237D91 /* Build configuration list for PBXNativeTarget "Daily Inspirational QuoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5EAF7B1D6EB0E100237D91 /* Debug */,
+				1F5EAF7C1D6EB0E100237D91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F5EAF7D1D6EB0E100237D91 /* Build configuration list for PBXNativeTarget "Daily Inspirational QuoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5EAF7E1D6EB0E100237D91 /* Debug */,
+				1F5EAF7F1D6EB0E100237D91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1F5EAF561D6EB0E100237D91 /* Daily_Inspirational_Quote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1F5EAF571D6EB0E100237D91 /* Daily_Inspirational_Quote.xcdatamodel */,
+			);
+			currentVersion = 1F5EAF571D6EB0E100237D91 /* Daily_Inspirational_Quote.xcdatamodel */;
+			path = Daily_Inspirational_Quote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1F5EAF441D6EB0E100237D91 /* Project object */;
+}
