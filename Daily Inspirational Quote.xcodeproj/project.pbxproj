@@ -19,6 +19,8 @@
 		1F5EAF5D1D6EB0E100237D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EAF5B1D6EB0E100237D91 /* LaunchScreen.storyboard */; };
 		1F5EAF681D6EB0E100237D91 /* Daily_Inspirational_QuoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF671D6EB0E100237D91 /* Daily_Inspirational_QuoteTests.swift */; };
 		1F5EAF731D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF721D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift */; };
+		1F7A91721D7B64DC00C0741D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A91711D7B64DC00C0741D /* Quote.swift */; };
+		1F7A91741D7B64E300C0741D /* QuoteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A91731D7B64E300C0741D /* QuoteList.swift */; };
 		1FF0C3771D6FE7CA0027EB49 /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		1F5EAF6E1D6EB0E100237D91 /* Daily Inspirational QuoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Daily Inspirational QuoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5EAF721D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_Inspirational_QuoteUITests.swift; sourceTree = "<group>"; };
 		1F5EAF741D6EB0E100237D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F7A91711D7B64DC00C0741D /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		1F7A91731D7B64E300C0741D /* QuoteList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteList.swift; sourceTree = "<group>"; };
 		1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +120,8 @@
 				1F4236B21D7677D300E2E376 /* Global.swift */,
 				1F5EAF4F1D6EB0E100237D91 /* AppDelegate.swift */,
 				1F5EAF511D6EB0E100237D91 /* MainViewController.swift */,
+				1F7A91711D7B64DC00C0741D /* Quote.swift */,
+				1F7A91731D7B64E300C0741D /* QuoteList.swift */,
 				1F5EAF531D6EB0E100237D91 /* Main.storyboard */,
 				1F5EAF591D6EB0E100237D91 /* Assets.xcassets */,
 				1F5EAF5B1D6EB0E100237D91 /* LaunchScreen.storyboard */,
@@ -284,9 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F5EAF521D6EB0E100237D91 /* MainViewController.swift in Sources */,
+				1F7A91741D7B64E300C0741D /* QuoteList.swift in Sources */,
 				1F5EAF581D6EB0E100237D91 /* Daily_Inspirational_Quote.xcdatamodeld in Sources */,
 				1F49A9691D7A7681007BCDDD /* AlertsViewController.swift in Sources */,
 				1F4236B31D7677D300E2E376 /* Global.swift in Sources */,
+				1F7A91721D7B64DC00C0741D /* Quote.swift in Sources */,
 				1F5EAF501D6EB0E100237D91 /* AppDelegate.swift in Sources */,
 				1F49A9671D7A7350007BCDDD /* InfoViewController.swift in Sources */,
 				1F49A9631D7A70D2007BCDDD /* Config.swift in Sources */,

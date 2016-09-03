@@ -79,21 +79,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJt-MZ-inz">
-                                <rect key="frame" x="26" y="37" width="34" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijw-et-hTb">
+                                <rect key="frame" x="286" y="41" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJt-MZ-inz">
+                                <rect key="frame" x="25" y="37" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="MEs-Be-Jy7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijw-et-hTb">
-                                <rect key="frame" x="232" y="46" width="29" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BJt-MZ-inz" firstAttribute="top" secondItem="puc-vu-Ine" secondAttribute="bottom" constant="17" id="A7k-lu-krx"/>
+                            <constraint firstItem="ijw-et-hTb" firstAttribute="centerX" secondItem="Q7c-X8-HnY" secondAttribute="centerX" id="E35-xu-JxU"/>
+                            <constraint firstItem="BJt-MZ-inz" firstAttribute="leading" secondItem="Q7c-X8-HnY" secondAttribute="leadingMargin" constant="6" id="vZH-AA-yjW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bL-5d-s2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -112,29 +117,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-Ul-IFh">
-                                <rect key="frame" x="219" y="67" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-Ul-IFh">
+                                <rect key="frame" x="278" y="28" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwe-G1-Wna">
-                                <rect key="frame" x="70" y="53" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwe-G1-Wna">
+                                <rect key="frame" x="20" y="24" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="pBh-W6-cwv"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-tI-nMh">
+                                <rect key="frame" x="0.0" y="144" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="494621600.94057697">
+                                    <!--2016-09-03 18:53:20 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4y-Cw-U8z">
+                                <rect key="frame" x="283" y="436" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveAlerts:" destination="djy-xu-l4k" eventType="touchUpInside" id="ag4-Db-TZZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Muw-tI-nMh" firstAttribute="top" secondItem="Qwe-G1-Wna" secondAttribute="bottom" constant="90" id="125-Qm-Rr5"/>
+                            <constraint firstItem="Muw-tI-nMh" firstAttribute="centerX" secondItem="hzX-Ul-IFh" secondAttribute="centerX" id="2gZ-8f-NlB"/>
+                            <constraint firstItem="K4y-Cw-U8z" firstAttribute="centerX" secondItem="Muw-tI-nMh" secondAttribute="centerX" id="7di-oI-073"/>
+                            <constraint firstItem="Muw-tI-nMh" firstAttribute="leading" secondItem="syy-rx-Ppt" secondAttribute="leading" id="PqT-gQ-IEj"/>
+                            <constraint firstItem="K4y-Cw-U8z" firstAttribute="top" secondItem="Muw-tI-nMh" secondAttribute="bottom" constant="76" id="Svx-bK-E2E"/>
+                            <constraint firstItem="Qwe-G1-Wna" firstAttribute="top" secondItem="PzH-gJ-YRY" secondAttribute="bottom" constant="8" id="ald-n1-wod"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Qwe-G1-Wna" secondAttribute="leading" id="b6W-Y9-Lgj"/>
+                            <constraint firstItem="hzX-Ul-IFh" firstAttribute="centerX" secondItem="syy-rx-Ppt" secondAttribute="centerX" id="kfb-nZ-odu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alertPicker" destination="Muw-tI-nMh" id="cRm-cg-4e4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTR-gm-EyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="1180"/>
+            <point key="canvasLocation" x="313" y="1180"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MEs-Be-Jy7"/>
+        <segue reference="pBh-W6-cwv"/>
     </inferredMetricsTieBreakers>
 </document>
