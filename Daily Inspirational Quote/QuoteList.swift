@@ -11,6 +11,8 @@ import UIKit
 
 class QuoteList {
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+
     private let savePath = (NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString).stringByAppendingPathComponent("Quote.plist") // ~/Quote.plist
     
     func allItems() -> [Quote] {
@@ -48,18 +50,21 @@ class QuoteList {
         items.append(["quote": item.quote, "deadline": item.deadline, "id": item.id, "author": item.author, "year": item.year]) // add a dictionary representing this Quote instance
         (items as NSArray).writeToFile(self.savePath, atomically: true) // items casted as NSArray because writeToFile:atomically: is not available on Swift arrays
         
-        // create a corresponding local notification
-        let notification = UILocalNotification()
-        notification.alertBody = "Quote Item \"\(item.quote)\" Is Overdue" // text that will be displayed in the notification
-        notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-        notification.fireDate = item.deadline // Quote item due date (when notification will be fired)
-        notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-        notification.userInfo = ["quote": item.quote, "id": item.id, "author": item.author, "year": item.year] // assign a unique identifier to the notification that we can use to retrieve it later
-        notification.category = "Quote_CATEGORY"
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        
-        self.setBadgeNumbers()
+        if(userDefaults.boolForKey("AlertsOn")){
+            // create a corresponding local notification
+            let notification = UILocalNotification()
+            notification.alertBody = "Daily quote \"\(item.quote)\"" // text that will be displayed in the notification
+            notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
+            notification.fireDate = item.deadline // Quote item due date (when notification will be fired)
+            notification.soundName = UILocalNotificationDefaultSoundName // play default sound
+            notification.userInfo = ["quote": item.quote, "id": item.id, "author": item.author, "year": item.year] // assign a unique identifier to the notification that we can use to retrieve it later
+            notification.category = "Quote_CATEGORY"
+            
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            
+            self.setBadgeNumbers()
+        }
+
     }
     
     func removeItem(item: Quote) {

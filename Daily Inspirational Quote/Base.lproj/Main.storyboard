@@ -36,8 +36,7 @@
                                 <rect key="frame" x="490" y="522" width="30" height="30"/>
                                 <state key="normal" title="Info"/>
                                 <connections>
-                                    <action selector="getNewQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekE-Nb-fzn"/>
-                                    <segue destination="9zS-3K-kKj" kind="show" id="yLv-mO-zk7"/>
+                                    <segue destination="9zS-3K-kKj" kind="show" id="jd3-CL-6v6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-yb-kFb">
@@ -117,7 +116,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-Ul-IFh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-Ul-IFh">
                                 <rect key="frame" x="278" y="28" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -130,34 +129,43 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="pBh-W6-cwv"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-sp-cro">
+                                <rect key="frame" x="531" y="105" width="51" height="31"/>
+                                <connections>
+                                    <action selector="alertSwitchAction:" destination="djy-xu-l4k" eventType="valueChanged" id="uKm-wk-wHM"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIc-8l-sad">
+                                <rect key="frame" x="12" y="110" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-tI-nMh">
-                                <rect key="frame" x="0.0" y="144" width="600" height="216"/>
+                                <rect key="frame" x="0.0" y="260" width="600" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="494604000.94057697">
                                     <!--2016-09-03 14:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4y-Cw-U8z">
-                                <rect key="frame" x="283" y="436" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveAlerts:" destination="djy-xu-l4k" eventType="touchUpInside" id="ag4-Db-TZZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Muw-tI-nMh" firstAttribute="top" secondItem="Qwe-G1-Wna" secondAttribute="bottom" constant="90" id="125-Qm-Rr5"/>
                             <constraint firstItem="Muw-tI-nMh" firstAttribute="centerX" secondItem="hzX-Ul-IFh" secondAttribute="centerX" id="2gZ-8f-NlB"/>
-                            <constraint firstItem="K4y-Cw-U8z" firstAttribute="centerX" secondItem="Muw-tI-nMh" secondAttribute="centerX" id="7di-oI-073"/>
+                            <constraint firstItem="TIc-8l-sad" firstAttribute="leading" secondItem="syy-rx-Ppt" secondAttribute="leadingMargin" constant="-8" id="3uw-nV-yMp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dfL-sp-cro" secondAttribute="trailing" id="Ihp-Od-pAe"/>
+                            <constraint firstItem="dfL-sp-cro" firstAttribute="top" secondItem="PzH-gJ-YRY" secondAttribute="bottom" constant="85" id="KtN-Rv-2ZU"/>
+                            <constraint firstItem="TIc-8l-sad" firstAttribute="top" secondItem="PzH-gJ-YRY" secondAttribute="bottom" constant="90" id="PYy-yt-NPP"/>
                             <constraint firstItem="Muw-tI-nMh" firstAttribute="leading" secondItem="syy-rx-Ppt" secondAttribute="leading" id="PqT-gQ-IEj"/>
-                            <constraint firstItem="K4y-Cw-U8z" firstAttribute="top" secondItem="Muw-tI-nMh" secondAttribute="bottom" constant="76" id="Svx-bK-E2E"/>
                             <constraint firstItem="Qwe-G1-Wna" firstAttribute="top" secondItem="PzH-gJ-YRY" secondAttribute="bottom" constant="8" id="ald-n1-wod"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Qwe-G1-Wna" secondAttribute="leading" id="b6W-Y9-Lgj"/>
+                            <constraint firstItem="hzX-Ul-IFh" firstAttribute="baseline" secondItem="Qwe-G1-Wna" secondAttribute="baseline" id="eoq-zN-alX"/>
                             <constraint firstItem="hzX-Ul-IFh" firstAttribute="centerX" secondItem="syy-rx-Ppt" secondAttribute="centerX" id="kfb-nZ-odu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="alertPicker" destination="Muw-tI-nMh" id="cRm-cg-4e4"/>
+                        <outlet property="alertSwitch" destination="dfL-sp-cro" id="mX0-Ze-7eh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTR-gm-EyR" userLabel="First Responder" sceneMemberID="firstResponder"/>

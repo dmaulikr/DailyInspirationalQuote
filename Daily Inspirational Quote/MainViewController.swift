@@ -62,6 +62,7 @@ class MainViewController: UIViewController {
             NSLog("AlertDate is not set")
             //set to 9am today
             let newDate: NSDate = cal.dateBySettingHour(9, minute: 0, second: 0, ofDate: date, options: NSCalendarOptions())!
+            userDefaults.setBool(true, forKey: "AlertsOn")
             userDefaults.setObject(newDate, forKey: "AlertDate")
             //set alert hr and min
             userDefaults.setInteger(9, forKey: "AlertHr")
@@ -121,13 +122,16 @@ class MainViewController: UIViewController {
         //NSLog("All items")
         //NSLog(QuoteList().allItems())
         NSLog("Quotes count \(quotes.count)")
+        if(quotes.count == 0){
+            return
+        }
         
-        if(quotes.count <= 70){
+        if(quotes.count <= 64){
             var dt = quotes[quotes.count-1].deadline
             NSLog("Latest deadline \(dt)")
 
             var i = quotes.count + 1
-            while i <= 75 {
+            while i <= 64 {
                 //print(i)
                 //NSLog("%@",dt);
                 //add 24 hr to dt
