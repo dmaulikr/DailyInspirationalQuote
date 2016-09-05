@@ -10,7 +10,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet var txtQuote: UITextView!
-    
+
+    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+
     var idQuote: String = ""
     var quote: String = ""
     var author: String = ""
@@ -18,12 +20,17 @@ class MainViewController: UIViewController {
     var authorField: String = ""
     var yearField: String = ""
     
-    var isFavourite: Bool = false
-    var bannerHeight = 50
+    var quoteItem: Quote!
+    var todaysQuoteItem: Quote!
+    var newQuote: Quote!
+    var quotes: [Quote] = []
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
-    let gradientLayer = CAGradientLayer()
+    let date: NSDate = NSDate()
+    let cal: NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+    let formatter = NSDateFormatter()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +38,6 @@ class MainViewController: UIViewController {
         title = APP_NAME
         
         // Detecting Device and setting constraints
-        
         let device = UIDevice.currentDevice().model
         let index = device.startIndex.advancedBy(4)
         globalDevice.name = device.substringToIndex(index)
@@ -42,40 +48,107 @@ class MainViewController: UIViewController {
             //formatiPhone()
         }
         
-        
-        /*
-        // 1
-        self.view.backgroundColor = UIColor.magentaColor()
-        
-        // 2
-        gradientLayer.frame = self.view.bounds
-        
-        // 3
-        let color1 = UIColor.clearColor().CGColor as CGColorRef
-        let color2 = UIColor(white: 0.0, alpha: 0.5).CGColor as CGColorRef
-        gradientLayer.colors = [color1, color2]
-        
-        // 4
-        gradientLayer.locations = [0.0, 0.80, 0.90, 1.0]
-        
-        // 5
-        self.view.layer.addSublayer(gradientLayer)
-        
-        // Do any additional setup after loading the view, typically from a nib.
-         */
-         
-        generateRandomQuote()
-        
-        print("all items")
-        print(QuoteList().allItems())
-        print("alert date")
-        print(globalDevice.alertDate)
+        if let alertDate = userDefaults.objectForKey("AlertDate") as? NSDate {
+            NSLog("AlertDate is set")
+            NSLog("AlertDate \(alertDate)")
+            NSLog("AlertHr \(userDefaults.integerForKey("AlertHr"))")
+            NSLog("AlertMin \(userDefaults.integerForKey("AlertMin"))")
+            
+            NSLog("All items")
+            print(QuoteList().allItems())
+            
+        } else {
+            // default value is not set or not an NSDate
+            NSLog("AlertDate is not set")
+            //set to 9am today
+            let newDate: NSDate = cal.dateBySettingHour(9, minute: 0, second: 0, ofDate: date, options: NSCalendarOptions())!
+            userDefaults.setObject(newDate, forKey: "AlertDate")
+            //set alert hr and min
+            userDefaults.setInteger(9, forKey: "AlertHr")
+            userDefaults.setInteger(0, forKey: "AlertMin")
+            //create QuoteList 64 items
+            quotes = QuoteList().allItems()
+            
+            //if empty create new quote list
+            if (quotes.count == 0) {
+                
+                dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                    self.createQuoteList()
+                    dispatch_async(dispatch_get_main_queue()) {
+                        // update some UI
+                        self.generateRandomQuote()
 
+                    }
+                }
+            }
+        }
+
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.syncQuoteList()
+            dispatch_async(dispatch_get_main_queue()) {
+                // update some UI
+                self.getTodaysQuote()
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func syncQuoteList() {
+        NSLog("Sync quotes list")
+
+        quotes = QuoteList().allItems()
+        //print(quotes[0])
+        //print(quotes[0].isOverdue)
+        for object in quotes {
+            if(object.isOverdue){
+                NSLog("Is overdue \(object.id)")
+                if(object.isTodaysQuote == false){
+                    NSLog("Is not todays quote \(object.id)")
+                    QuoteList().removeItem(object)
+                }
+            }
+        }
+        
+        //NSLog("All items")
+        //NSLog(QuoteList().allItems())
+        NSLog("Quotes count \(quotes.count)")
+        
+        if(quotes.count <= 70){
+            var dt = quotes[quotes.count-1].deadline
+            NSLog("Latest deadline \(dt)")
+
+            var i = quotes.count + 1
+            while i <= 75 {
+                //print(i)
+                //NSLog("%@",dt);
+                //add 24 hr to dt
+                //NSLog("old date %@",dt);
+                dt = cal.dateByAddingUnit(.Hour, value: 24, toDate: dt, options: [])!
+                //NSLog("new date %@",dt);
+                
+                let qt = getNewQuoteForDate(dt)
+                //NSLog("Date %@",dt);
+                //NSLog("Quote is \(qt)")
+                
+                QuoteList().addItem(qt)
+                
+                i = i + 1
+            }
+            
+        }
+        
+        
+        NSLog("Sync quotes list END")
+
     }
     
     func generateRandomQuote(){
@@ -106,7 +179,7 @@ class MainViewController: UIViewController {
                 quote = quote + "\r\n\n" + authorField + "\r\n" + yearField
             }
             
-            print("Quote is: " + quote)
+            //NSLog("Quote is: " + quote)
 
             formatQuote(quote)
             
@@ -114,8 +187,37 @@ class MainViewController: UIViewController {
         
     }
     
-    func formatQuote(quote: String){
+    func getTodaysQuote(){
         
+        quotes = QuoteList().allItems()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        formatter.timeStyle = .MediumStyle
+        
+        for object in quotes {
+            if(object.isTodaysQuote){
+                todaysQuoteItem = object
+                break
+            }
+        }
+        
+        //print(todaysQuoteItem.quote)
+        idQuote = todaysQuoteItem.id 
+        quote = todaysQuoteItem.quote 
+        authorField = (todaysQuoteItem.author)
+        yearField = (todaysQuoteItem.year)
+
+        if authorField != "" || yearField != "" {
+            quote = quote + "\r\n\n" + authorField + "\r\n" + yearField
+        }
+        
+        //NSLog("Quote is: " + quote)
+        
+        formatQuote(quote)
+        
+    }
+    
+    func formatQuote(quote: String){
+
         
         if globalDevice.name == "iPad" {
             
@@ -159,11 +261,77 @@ class MainViewController: UIViewController {
     
     
     @IBAction func getNewRandomQuote(sender: AnyObject) {
-
         generateRandomQuote()
+    }
+    
+    func createQuoteList() {
+        NSLog("Creating quotes list")
+        quotes = QuoteList().allItems()
+        
+        var dt = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: -1, toDate: NSDate(), options: [])!
+
+        for _ in 1...64 {
+            //NSLog("%@",dt);
+            //add 24 hr to dt
+            //NSLog("old date %@",dt);
+            dt = cal.dateByAddingUnit(.Hour, value: 24, toDate: dt, options: [])!
+            //NSLog("new date %@",dt);
+            
+            let qt = getNewQuoteForDate(dt)
+            //NSLog("Date %@",dt);
+            //NSLog("Quote is \(qt)")
+            
+            QuoteList().addItem(qt)
+
+        }
+        NSLog("Creating quotes list END")
 
     }
     
+    func getNewQuoteForDate(alertDate: NSDate) -> Quote{
+        
+        if let arrayQuote = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Quotes", ofType: "plist")!) {
+            
+            let nQuote = UInt32(arrayQuote.count)                      // Convert to Uint32
+            let randomQuote = Int(arc4random_uniform(nQuote))          // Range between 0 - nQuote
+            let pickQuote: AnyObject = arrayQuote[randomQuote]         // Random Quote
+            
+            idQuote = pickQuote.objectForKey(FIELD_ID) as! String
+            quote = pickQuote.objectForKey(FIELD_QUOTE) as! String
+            
+            
+            if (pickQuote.objectForKey(FIELD_AUTHOR) as? String != nil) {
+                authorField = (pickQuote.objectForKey(FIELD_AUTHOR) as? String)!
+            } else {
+                authorField = ""
+            }
+            
+            if (pickQuote.objectForKey(FIELD_YEAR) as? String != nil) {
+                yearField = (pickQuote.objectForKey(FIELD_YEAR) as? String)!
+            } else {
+                yearField = ""
+            }
+            
+            //get midnight of alertDate, add hr and min to create new date
+            let dt = cal.startOfDayForDate(alertDate)
+            let components = cal.components(([.Day, .Month, .Year]), fromDate: dt)
+            components.hour = userDefaults.integerForKey("AlertHr")
+            components.minute = userDefaults.integerForKey("AlertMin")
+            let newDate = cal.dateFromComponents(components)!
+            
+            formatter.dateStyle = NSDateFormatterStyle.LongStyle
+            formatter.timeStyle = .MediumStyle
+            
+            //let dateString = formatter.stringFromDate(newDate)
 
+            quoteItem = Quote(deadline: newDate, quote: quote, author: authorField, year: yearField, id: idQuote)
+            
+            //NSLog("Date " + dateString)
+
+        }
+        return quoteItem
+        
+    }
+    
 }
 
