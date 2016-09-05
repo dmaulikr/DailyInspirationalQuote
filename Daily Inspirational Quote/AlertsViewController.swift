@@ -37,8 +37,9 @@ class AlertsViewController: UIViewController {
         //print(newQuote.quote)
         
         QuoteList().addItem(newQuote) // schedule a local notification to persist this item
-        print(QuoteList().allItems())
-
+        
+        globalDevice.alertDate = alertPicker.date
+        
     }
     
     func getNewQuote() -> Quote{

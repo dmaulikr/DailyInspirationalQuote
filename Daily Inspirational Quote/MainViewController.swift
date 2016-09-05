@@ -64,8 +64,13 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
          */
          
-        
         generateRandomQuote()
+        
+        print("all items")
+        print(QuoteList().allItems())
+        print("alert date")
+        print(globalDevice.alertDate)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -153,11 +158,12 @@ class MainViewController: UIViewController {
     }
     
     
-    @IBAction func getNewQuote(sender: AnyObject) {
+    @IBAction func getNewRandomQuote(sender: AnyObject) {
 
         generateRandomQuote()
 
     }
+    
 
 }
 

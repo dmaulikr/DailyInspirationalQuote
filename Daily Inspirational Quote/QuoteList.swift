@@ -62,18 +62,6 @@ class QuoteList {
             self.setBadgeNumbers()
         }
         
-        func scheduleReminderforItem(item: Quote) {
-            let notification = UILocalNotification() // create a new reminder notification
-            notification.alertBody = "Reminder: Quote Item \"\(item.quote)\" Is Overdue" // text that will be displayed in the notification
-            notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-            notification.fireDate = NSDate().dateByAddingTimeInterval(30 * 60) // 30 minutes from current time
-            notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-            notification.userInfo = ["quote": item.quote, "id": item.id, "author": item.author, "year": item.year] // assign a unique identifier to the notification that we can use to retrieve it later
-            notification.category = "Quote_CATEGORY"
-            
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
-        
         func removeItem(item: Quote) {
             for notification in UIApplication.sharedApplication().scheduledLocalNotifications! as [UILocalNotification] { // loop through notifications...
                 if (notification.userInfo!["id"] as! String == item.id) { // ...and cancel the notification that corresponds to this Quote instance (matched by id)
