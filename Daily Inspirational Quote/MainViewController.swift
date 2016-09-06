@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Social
 
 class MainViewController: UIViewController {
     @IBOutlet var txtQuote: UITextView!
-
+    
     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-
+    
     var idQuote: String = ""
     var quote: String = ""
     var author: String = ""
@@ -22,6 +23,7 @@ class MainViewController: UIViewController {
     
     var quoteItem: Quote!
     var todaysQuoteItem: Quote!
+    var currentQuoteItem: Quote!
     var newQuote: Quote!
     var quotes: [Quote] = []
     
@@ -30,8 +32,8 @@ class MainViewController: UIViewController {
     let date: NSDate = NSDate()
     let cal: NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
     let formatter = NSDateFormatter()
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,12 +80,12 @@ class MainViewController: UIViewController {
                     dispatch_async(dispatch_get_main_queue()) {
                         // update some UI
                         self.generateRandomQuote()
-
+                        
                     }
                 }
             }
         }
-
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -97,7 +99,7 @@ class MainViewController: UIViewController {
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -105,7 +107,7 @@ class MainViewController: UIViewController {
     
     func syncQuoteList() {
         NSLog("Sync quotes list")
-
+        
         quotes = QuoteList().allItems()
         //print(quotes[0])
         //print(quotes[0].isOverdue)
@@ -128,12 +130,12 @@ class MainViewController: UIViewController {
         
         //Testing
         //print(UIApplication.sharedApplication().scheduledLocalNotifications)
-
+        
         
         if(quotes.count <= 64){
             var dt = quotes[quotes.count-1].deadline
             NSLog("Latest deadline \(dt)")
-
+            
             var i = quotes.count + 1
             while i <= 64 {
                 //print(i)
@@ -156,7 +158,7 @@ class MainViewController: UIViewController {
         
         
         NSLog("Sync quotes list END")
-
+        
     }
     
     func generateRandomQuote(){
@@ -188,6 +190,7 @@ class MainViewController: UIViewController {
             }
             
             //NSLog("Quote is: " + quote)
+            currentQuoteItem = Quote(deadline: NSDate(), quote: pickQuote.objectForKey(FIELD_QUOTE) as! String, author: authorField, year: yearField, id: idQuote)
 
             formatQuote(quote)
             
@@ -209,23 +212,40 @@ class MainViewController: UIViewController {
         }
         
         //print(todaysQuoteItem.quote)
-        idQuote = todaysQuoteItem.id 
-        quote = todaysQuoteItem.quote 
+        idQuote = todaysQuoteItem.id
+        quote = todaysQuoteItem.quote
         authorField = (todaysQuoteItem.author)
         yearField = (todaysQuoteItem.year)
-
+        
         if authorField != "" || yearField != "" {
             quote = quote + "\r\n\n" + authorField + "\r\n" + yearField
         }
         
         //NSLog("Quote is: " + quote)
-        
+        currentQuoteItem = Quote(deadline: NSDate(), quote: todaysQuoteItem.quote, author: authorField, year: yearField, id: idQuote)
         formatQuote(quote)
         
     }
     
+    func getQuoteTxt(quoteItem: Quote) -> String{
+        
+        idQuote = quoteItem.id
+        quote = quoteItem.quote
+        authorField = (quoteItem.author)
+        yearField = (quoteItem.year)
+        
+        print(authorField)
+        
+        quote = quote + "\r\n\n" + authorField  +  "\r\n\n" + SHARED_FROM
+        
+        NSLog("Quote is: " + quote)
+        
+        return quote
+        
+    }
+    
     func formatQuote(quote: String){
-
+        
         
         if globalDevice.name == "iPad" {
             
@@ -277,7 +297,7 @@ class MainViewController: UIViewController {
         quotes = QuoteList().allItems()
         
         var dt = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: -1, toDate: NSDate(), options: [])!
-
+        
         for _ in 1...64 {
             //NSLog("%@",dt);
             //add 24 hr to dt
@@ -290,10 +310,10 @@ class MainViewController: UIViewController {
             //NSLog("Quote is \(qt)")
             
             QuoteList().addItem(qt)
-
+            
         }
         NSLog("Creating quotes list END")
-
+        
     }
     
     func getNewQuoteForDate(alertDate: NSDate) -> Quote{
@@ -331,14 +351,26 @@ class MainViewController: UIViewController {
             formatter.timeStyle = .MediumStyle
             
             //let dateString = formatter.stringFromDate(newDate)
-
+            
             quoteItem = Quote(deadline: newDate, quote: quote, author: authorField, year: yearField, id: idQuote)
             
             //NSLog("Date " + dateString)
-
+            
         }
         return quoteItem
         
+    }
+    
+    @IBAction func shareToFacebook(sender: AnyObject) {
+        let shareToFacebook : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        shareToFacebook.setInitialText(getQuoteTxt(currentQuoteItem))
+        self.presentViewController(shareToFacebook, animated: true, completion: nil)
+    }
+    
+    @IBAction func shareToTwitter(sender: AnyObject) {
+        let shareToTwitter : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        shareToTwitter.setInitialText(getQuoteTxt(currentQuoteItem))
+        self.presentViewController(shareToTwitter, animated: true, completion: nil)
     }
     
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F4236B31D7677D300E2E376 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4236B21D7677D300E2E376 /* Global.swift */; };
+		1F4556B71D7E683800F643BF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4556B61D7E683800F643BF /* Social.framework */; };
 		1F49A9631D7A70D2007BCDDD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49A9621D7A70D2007BCDDD /* Config.swift */; };
 		1F49A9671D7A7350007BCDDD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49A9661D7A7350007BCDDD /* InfoViewController.swift */; };
 		1F49A9691D7A7681007BCDDD /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49A9681D7A7681007BCDDD /* AlertsViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1F4236B21D7677D300E2E376 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = ../Global.swift; sourceTree = "<group>"; };
+		1F4556B61D7E683800F643BF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1F49A9621D7A70D2007BCDDD /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1F49A9661D7A7350007BCDDD /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		1F49A9681D7A7681007BCDDD /* AlertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4556B71D7E683800F643BF /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +96,7 @@
 		1F5EAF431D6EB0E100237D91 = {
 			isa = PBXGroup;
 			children = (
+				1F4556B61D7E683800F643BF /* Social.framework */,
 				1FF0C3751D6FE79F0027EB49 /* Supporting Files */,
 				1F5EAF4E1D6EB0E100237D91 /* Daily Inspirational Quote */,
 				1F5EAF661D6EB0E100237D91 /* Daily Inspirational QuoteTests */,
