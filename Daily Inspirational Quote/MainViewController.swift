@@ -126,6 +126,10 @@ class MainViewController: UIViewController {
             return
         }
         
+        //Testing
+        //print(UIApplication.sharedApplication().scheduledLocalNotifications)
+
+        
         if(quotes.count <= 64){
             var dt = quotes[quotes.count-1].deadline
             NSLog("Latest deadline \(dt)")

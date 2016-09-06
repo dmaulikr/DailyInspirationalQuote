@@ -54,7 +54,7 @@ class QuoteList {
         if(userDefaults.boolForKey("AlertsOn") == true){
             // create a corresponding local notification
             let notification = UILocalNotification()
-            notification.alertBody = "Daily quote \"\(item.quote)\"" // text that will be displayed in the notification
+            notification.alertBody = "\"\(item.quote)\" - \(item.author)" // text that will be displayed in the notification
             notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
             notification.fireDate = item.deadline // Quote item due date (when notification will be fired)
             notification.soundName = UILocalNotificationDefaultSoundName // play default sound
