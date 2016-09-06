@@ -373,5 +373,16 @@ class MainViewController: UIViewController {
         self.presentViewController(shareToTwitter, animated: true, completion: nil)
     }
     
+    @IBAction func shareButtonClicked(sender: AnyObject) {
+        let textToShare = "Swift is awesome!  Check out this website about it!"
+        
+        if let myWebsite = NSURL(string: "http://www.codingexplorer.com/") {
+            let objectsToShare = [textToShare, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            activityVC.popoverPresentationController?.sourceView = sender as? UIView
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+    }
 }
 
