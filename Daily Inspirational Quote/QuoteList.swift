@@ -50,7 +50,8 @@ class QuoteList {
         items.append(["quote": item.quote, "deadline": item.deadline, "id": item.id, "author": item.author, "year": item.year]) // add a dictionary representing this Quote instance
         (items as NSArray).writeToFile(self.savePath, atomically: true) // items casted as NSArray because writeToFile:atomically: is not available on Swift arrays
         
-        if(userDefaults.boolForKey("AlertsOn")){
+        NSLog("AlertsOn \(userDefaults.boolForKey("AlertsOn"))")
+        if(userDefaults.boolForKey("AlertsOn") == true){
             // create a corresponding local notification
             let notification = UILocalNotification()
             notification.alertBody = "Daily quote \"\(item.quote)\"" // text that will be displayed in the notification
