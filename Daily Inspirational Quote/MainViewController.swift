@@ -24,6 +24,8 @@ class MainViewController: UIViewController {
     var currentQuoteItem: Quote!
     var newQuote: Quote!
     var quotes: [Quote] = []
+    let gradientLayer = CAGradientLayer()
+
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
@@ -36,6 +38,27 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         title = APP_NAME
+        
+        // 1
+        self.view.backgroundColor = UIColor.magentaColor()
+        
+        // 2
+        gradientLayer.frame = self.view.bounds
+        
+        // 3
+        let color1 = UIColor.clearColor().CGColor as CGColorRef
+        let color2 = UIColor(white: 0.0, alpha: 0.5).CGColor as CGColorRef
+        gradientLayer.colors = [color1, color2]
+        
+        // 4
+        gradientLayer.locations = [0.0, 0.80, 0.90, 1.0]
+        
+        // 5
+        self.view.layer.addSublayer(gradientLayer)
+        
+        // Do any additional setup after loading the view, typically from a nib.
+
+        
         
         // Detecting Device and setting constraints
         let device = UIDevice.currentDevice().model
@@ -239,6 +262,7 @@ class MainViewController: UIViewController {
         
         if globalDevice.name == "iPad" {
             
+            NSLog("Formatting for iPad")
             // iPAD Formatting
             // ---------------
             let style = NSMutableParagraphStyle()
@@ -252,6 +276,8 @@ class MainViewController: UIViewController {
             txtQuote.scrollRangeToVisible(NSMakeRange(0, 0))                    // Scroll to the Top
             
         } else {
+            NSLog("Formatting for iPhone")
+
             
             // iPhone/iPod Formatting
             // ----------------------

@@ -164,7 +164,7 @@ let FONT_QUOTE_iPhone4 = UIFont(name: "HelveticaNeue-Light", size: 16)
 let FONT_QUOTE_iPad = UIFont(name: "HelveticaNeue-Light", size: 28)
 
 // Font Color
-let FONT_QUOTE_COLOR = DARKGRAY
+let FONT_QUOTE_COLOR = WHITE
 
 
 // -------------------------------------------------------------------
