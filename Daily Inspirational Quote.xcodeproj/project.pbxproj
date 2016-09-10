@@ -22,6 +22,7 @@
 		1F5EAF731D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF721D6EB0E100237D91 /* Daily_Inspirational_QuoteUITests.swift */; };
 		1F7A91721D7B64DC00C0741D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A91711D7B64DC00C0741D /* Quote.swift */; };
 		1F7A91741D7B64E300C0741D /* QuoteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A91731D7B64E300C0741D /* QuoteList.swift */; };
+		1FB4ECDA1D8488AF00927D94 /* A little sunshine.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4ECD91D8488AF00927D94 /* A little sunshine.ttf */; };
 		1FF0C3771D6FE7CA0027EB49 /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		1F5EAF741D6EB0E100237D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F7A91711D7B64DC00C0741D /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		1F7A91731D7B64E300C0741D /* QuoteList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteList.swift; sourceTree = "<group>"; };
+		1FB4ECD91D8488AF00927D94 /* A little sunshine.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A little sunshine.ttf"; sourceTree = "<group>"; };
 		1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 		1FF0C3751D6FE79F0027EB49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1FB4ECD91D8488AF00927D94 /* A little sunshine.ttf */,
 				1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */,
 			);
 			name = "Supporting Files";
@@ -265,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB4ECDA1D8488AF00927D94 /* A little sunshine.ttf in Resources */,
 				1F5EAF5D1D6EB0E100237D91 /* LaunchScreen.storyboard in Resources */,
 				1F5EAF5A1D6EB0E100237D91 /* Assets.xcassets in Resources */,
 				1F5EAF551D6EB0E100237D91 /* Main.storyboard in Resources */,

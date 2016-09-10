@@ -149,7 +149,7 @@ let NAVBAR_COLOR: UIColor = BLU
 let NAVBAR_TINT_COLOR: UIColor = WHITE
 
 // Font type, size and Color
-let NAVBAR_FONT: UIFont = UIFont(name: "HelveticaNeue-Light", size: 18)!
+let NAVBAR_FONT: UIFont = UIFont(name: "A little sunshine", size: 18)!
 let NAVBAR_FONT_COLOR: UIColor = WHITE
 
 
@@ -159,9 +159,9 @@ let NAVBAR_FONT_COLOR: UIColor = WHITE
 // -------------------------------------------------------------------
 
 // Font type and size for iPhone and iPad
-let FONT_QUOTE_iPhone = UIFont(name: "HelveticaNeue-Light", size: 18)
-let FONT_QUOTE_iPhone4 = UIFont(name: "HelveticaNeue-Light", size: 16)
-let FONT_QUOTE_iPad = UIFont(name: "HelveticaNeue-Light", size: 28)
+let FONT_QUOTE_iPhone = UIFont(name: "A little sunshine", size: 28)
+let FONT_QUOTE_iPhone4 = UIFont(name: "A little sunshine", size: 16)
+let FONT_QUOTE_iPad = UIFont(name: "A little sunshine", size: 28)
 
 // Font Color
 let FONT_QUOTE_COLOR = WHITE
