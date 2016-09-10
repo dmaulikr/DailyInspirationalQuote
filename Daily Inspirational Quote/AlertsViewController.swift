@@ -62,7 +62,7 @@ class AlertsViewController: UIViewController {
             components.minute = userDefaults.integerForKey("AlertMin")
             let newDate = cal.dateFromComponents(components)!
             
-            let qt = Quote.init(deadline: newDate, quote: object.quote, author: object.author, year: object.year, id: object.id)
+            let qt = Quote.init(deadline: newDate, quote: object.quote, author: object.author, id: object.id)
             QuoteList().addItem(qt)
         }
         

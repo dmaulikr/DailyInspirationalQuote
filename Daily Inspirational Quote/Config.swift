@@ -93,7 +93,6 @@ let ADMOB_UNIT_ID = "ca-app-pub-5109865943077489/8404549657"
 let FIELD_ID = "id"
 let FIELD_QUOTE = "Quote"
 let FIELD_AUTHOR = "Author"
-let FIELD_YEAR = "Year"
 
 // -------------------------------------------------------------------
 

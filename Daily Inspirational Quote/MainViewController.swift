@@ -17,9 +17,7 @@ class MainViewController: UIViewController {
     var idQuote: String = ""
     var quote: String = ""
     var author: String = ""
-    var year: String = ""
     var authorField: String = ""
-    var yearField: String = ""
     
     var quoteItem: Quote!
     var todaysQuoteItem: Quote!
@@ -179,18 +177,12 @@ class MainViewController: UIViewController {
                 authorField = ""
             }
             
-            if (pickQuote.objectForKey(FIELD_YEAR) as? String != nil) {
-                yearField = (pickQuote.objectForKey(FIELD_YEAR) as? String)!
-            } else {
-                yearField = ""
-            }
-            
-            if authorField != "" || yearField != "" {
-                quote = quote + "\r\n\n" + authorField + "\r\n" + yearField
+            if authorField != "" {
+                quote = quote + "\r\n\n" + authorField
             }
             
             //NSLog("Quote is: " + quote)
-            currentQuoteItem = Quote(deadline: NSDate(), quote: pickQuote.objectForKey(FIELD_QUOTE) as! String, author: authorField, year: yearField, id: idQuote)
+            currentQuoteItem = Quote(deadline: NSDate(), quote: pickQuote.objectForKey(FIELD_QUOTE) as! String, author: authorField, id: idQuote)
 
             formatQuote(quote)
             
@@ -215,14 +207,13 @@ class MainViewController: UIViewController {
         idQuote = todaysQuoteItem.id
         quote = todaysQuoteItem.quote
         authorField = (todaysQuoteItem.author)
-        yearField = (todaysQuoteItem.year)
         
-        if authorField != "" || yearField != "" {
-            quote = quote + "\r\n\n" + authorField + "\r\n" + yearField
+        if authorField != "" {
+            quote = quote + "\r\n\n" + authorField
         }
         
         //NSLog("Quote is: " + quote)
-        currentQuoteItem = Quote(deadline: NSDate(), quote: todaysQuoteItem.quote, author: authorField, year: yearField, id: idQuote)
+        currentQuoteItem = Quote(deadline: NSDate(), quote: todaysQuoteItem.quote, author: authorField, id: idQuote)
         formatQuote(quote)
         
     }
@@ -232,11 +223,10 @@ class MainViewController: UIViewController {
         idQuote = quoteItem.id
         quote = quoteItem.quote
         authorField = (quoteItem.author)
-        yearField = (quoteItem.year)
         
         print(authorField)
         
-        quote = quote + "\r\n\n" + authorField  +  "\r\n\n" + SHARED_FROM
+        quote = quote + "\r\n - " +  authorField
         
         NSLog("Quote is: " + quote)
         
@@ -334,12 +324,6 @@ class MainViewController: UIViewController {
                 authorField = ""
             }
             
-            if (pickQuote.objectForKey(FIELD_YEAR) as? String != nil) {
-                yearField = (pickQuote.objectForKey(FIELD_YEAR) as? String)!
-            } else {
-                yearField = ""
-            }
-            
             //get midnight of alertDate, add hr and min to create new date
             let dt = cal.startOfDayForDate(alertDate)
             let components = cal.components(([.Day, .Month, .Year]), fromDate: dt)
@@ -352,7 +336,7 @@ class MainViewController: UIViewController {
             
             //let dateString = formatter.stringFromDate(newDate)
             
-            quoteItem = Quote(deadline: newDate, quote: quote, author: authorField, year: yearField, id: idQuote)
+            quoteItem = Quote(deadline: newDate, quote: quote, author: authorField, id: idQuote)
             
             //NSLog("Date " + dateString)
             

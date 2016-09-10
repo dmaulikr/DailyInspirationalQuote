@@ -17,7 +17,7 @@ class QuoteList {
     
     func allItems() -> [Quote] {
         var items: [AnyObject] = self.rawItems()
-        return items.map({Quote(deadline: $0["deadline"] as! NSDate, quote: $0["quote"] as! String, author: $0["author"] as! String, year: $0["year"] as! String,  id: $0["id"] as! String!)}).sort({
+        return items.map({Quote(deadline: $0["deadline"] as! NSDate, quote: $0["quote"] as! String, author: $0["author"] as! String, id: $0["id"] as! String!)}).sort({
             return ($0.deadline.compare($1.deadline) == .OrderedAscending)
         })
     }
@@ -47,7 +47,7 @@ class QuoteList {
     func addItem(item: Quote) {
         // persist a representation of this Quote item in a plist
         var items: [AnyObject] = self.rawItems()
-        items.append(["quote": item.quote, "deadline": item.deadline, "id": item.id, "author": item.author, "year": item.year]) // add a dictionary representing this Quote instance
+        items.append(["quote": item.quote, "deadline": item.deadline, "id": item.id, "author": item.author]) // add a dictionary representing this Quote instance
         (items as NSArray).writeToFile(self.savePath, atomically: true) // items casted as NSArray because writeToFile:atomically: is not available on Swift arrays
         
         NSLog("AlertsOn \(userDefaults.boolForKey("AlertsOn"))")
@@ -58,7 +58,7 @@ class QuoteList {
             notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
             notification.fireDate = item.deadline // Quote item due date (when notification will be fired)
             notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-            notification.userInfo = ["quote": item.quote, "id": item.id, "author": item.author, "year": item.year] // assign a unique identifier to the notification that we can use to retrieve it later
+            notification.userInfo = ["quote": item.quote, "id": item.id, "author": item.author] // assign a unique identifier to the notification that we can use to retrieve it later
             notification.category = "Quote_CATEGORY"
             
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
