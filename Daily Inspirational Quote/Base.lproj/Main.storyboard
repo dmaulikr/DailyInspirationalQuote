@@ -18,25 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxK-wJ-Jln">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxK-wJ-Jln">
                                 <rect key="frame" x="59" y="140" width="482" height="320"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s18-OQ-cvO">
-                                <rect key="frame" x="484" y="28" width="57" height="30"/>
-                                <state key="normal" title="Random"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s18-OQ-cvO">
+                                <rect key="frame" x="488" y="18" width="50" height="50"/>
+                                <state key="normal" image="Shuffle-50.png"/>
                                 <connections>
                                     <action selector="getNewRandomQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2YJ-G7-gdp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-yb-kFb">
-                                <rect key="frame" x="54" y="28" width="57" height="30"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="djy-xu-l4k" kind="show" id="Ay7-g5-abk"/>
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXd-67-zDY">
@@ -44,10 +37,10 @@
                                 <items>
                                     <barButtonItem id="dUg-au-0d1"/>
                                     <barButtonItem style="plain" id="Qgx-lq-puW">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O2x-JY-zUD">
-                                            <rect key="frame" x="30" y="7" width="67" height="30"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O2x-JY-zUD">
+                                            <rect key="frame" x="30" y="-3" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Facebook"/>
+                                            <state key="normal" image="Facebook Filled-50.png"/>
                                             <connections>
                                                 <action selector="shareToFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mp8-jw-D3c"/>
                                             </connections>
@@ -55,10 +48,10 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rRw-Oe-uPP"/>
                                     <barButtonItem style="plain" id="pKM-4P-eaX">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kvG-w6-KAk">
-                                            <rect key="frame" x="214" y="7" width="48" height="30"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kvG-w6-KAk">
+                                            <rect key="frame" x="197" y="-3" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Twitter"/>
+                                            <state key="normal" image="Twitter Filled-50.png"/>
                                             <connections>
                                                 <action selector="shareToTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CjK-fP-Dew"/>
                                             </connections>
@@ -66,10 +59,10 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iXU-RP-Kte"/>
                                     <barButtonItem style="plain" id="9XD-Rg-Flt">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z3K-qo-XUT">
-                                            <rect key="frame" x="380" y="7" width="53" height="30"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="z3K-qo-XUT">
+                                            <rect key="frame" x="363" y="-3" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Share"/>
+                                            <state key="normal" image="Upload-50.png"/>
                                             <connections>
                                                 <action selector="shareButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXs-cT-P7i"/>
                                             </connections>
@@ -77,10 +70,10 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="O4b-Nt-tKw"/>
                                     <barButtonItem style="plain" id="rci-qx-gpW">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CpX-LP-5p3">
-                                            <rect key="frame" x="550" y="7" width="30" height="30"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CpX-LP-5p3">
+                                            <rect key="frame" x="530" y="-3" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Info"/>
+                                            <state key="normal" image="Info-50.png"/>
                                             <connections>
                                                 <segue destination="9zS-3K-kKj" kind="show" id="jd3-CL-6v6"/>
                                             </connections>
@@ -88,6 +81,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-yb-kFb">
+                                <rect key="frame" x="58" y="10" width="50" height="50"/>
+                                <state key="normal" image="Clock-50.png"/>
+                                <connections>
+                                    <segue destination="djy-xu-l4k" kind="show" id="Ay7-g5-abk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -106,6 +106,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alertsButton" destination="SLh-yb-kFb" id="Ner-fH-qFt"/>
+                        <outlet property="fbButtonItem" destination="Qgx-lq-puW" id="lqb-jr-hyq"/>
+                        <outlet property="infoButtonItem" destination="rci-qx-gpW" id="cvR-FU-7KY"/>
+                        <outlet property="randomButton" destination="s18-OQ-cvO" id="u91-Ft-a09"/>
+                        <outlet property="shareButtonItem" destination="9XD-Rg-Flt" id="r07-dm-gqQ"/>
+                        <outlet property="twitterButtonItem" destination="pKM-4P-eaX" id="gDT-0x-9Ew"/>
                         <outlet property="txtQuote" destination="RxK-wJ-Jln" id="fyf-wO-bIC"/>
                     </connections>
                 </viewController>
@@ -164,8 +170,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-Ul-IFh">
-                                <rect key="frame" x="259" y="32" width="64" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Get inspired every day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-Ul-IFh">
+                                <rect key="frame" x="152" y="32" width="171" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -221,7 +227,15 @@
             <point key="canvasLocation" x="313" y="1180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Clock-50.png" width="50" height="50"/>
+        <image name="Facebook Filled-50.png" width="50" height="50"/>
+        <image name="Info-50.png" width="50" height="50"/>
+        <image name="Shuffle-50.png" width="50" height="50"/>
+        <image name="Twitter Filled-50.png" width="50" height="50"/>
+        <image name="Upload-50.png" width="50" height="50"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MEs-Be-Jy7"/>
+        <segue reference="pBh-W6-cwv"/>
     </inferredMetricsTieBreakers>
 </document>

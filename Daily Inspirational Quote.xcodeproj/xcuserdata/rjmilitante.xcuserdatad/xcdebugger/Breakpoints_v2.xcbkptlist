@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Daily Inspirational Quote/MainViewController.swift"
-            timestampString = "495218545.919991"
+            timestampString = "495237279.48536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
-            landmarkName = "getQuoteTxt(_:)"
-            landmarkType = "5">
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "MainViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

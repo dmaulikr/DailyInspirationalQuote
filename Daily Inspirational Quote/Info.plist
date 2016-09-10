@@ -29,7 +29,6 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>A little sunshine.ttf</string>
-		<string></string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

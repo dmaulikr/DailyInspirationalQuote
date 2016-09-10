@@ -11,6 +11,13 @@ import Social
 
 class MainViewController: UIViewController {
     @IBOutlet var txtQuote: UITextView!
+    @IBOutlet var alertsButton: UIButton!
+    @IBOutlet var randomButton: UIButton!
+    @IBOutlet var fbButtonItem: UIBarButtonItem!
+    @IBOutlet var twitterButtonItem: UIBarButtonItem!
+    @IBOutlet var shareButtonItem: UIBarButtonItem!
+    @IBOutlet var infoButtonItem: UIBarButtonItem!
+
     
     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
     
@@ -33,14 +40,13 @@ class MainViewController: UIViewController {
     let cal: NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
     let formatter = NSDateFormatter()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = APP_NAME
         
         // 1
-        self.view.backgroundColor = UIColor.magentaColor()
+        self.view.backgroundColor = UIColor.purpleColor()
         
         // 2
         gradientLayer.frame = self.view.bounds
@@ -66,9 +72,9 @@ class MainViewController: UIViewController {
         globalDevice.name = device.substringToIndex(index)
         
         if globalDevice.name == "iPad" {
-            //formatiPad()
+            formatiPad()
         } else {
-            //formatiPhone()
+            formatiPhone()
         }
         
         if let alertDate = userDefaults.objectForKey("AlertDate") as? NSDate {
@@ -255,6 +261,16 @@ class MainViewController: UIViewController {
         
         return quote
         
+    }
+    
+    func formatiPad() {
+        NSLog("Format iPad")
+
+    }
+    
+    func formatiPhone() {
+        NSLog("Format iPhone")        
+
     }
     
     func formatQuote(quote: String){

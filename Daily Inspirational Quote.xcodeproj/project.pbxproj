@@ -12,6 +12,9 @@
 		1F49A9631D7A70D2007BCDDD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49A9621D7A70D2007BCDDD /* Config.swift */; };
 		1F49A9671D7A7350007BCDDD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49A9661D7A7350007BCDDD /* InfoViewController.swift */; };
 		1F49A9691D7A7681007BCDDD /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49A9681D7A7681007BCDDD /* AlertsViewController.swift */; };
+		1F4FBB381D84C49B004FD004 /* Facebook Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4FBB371D84C49B004FD004 /* Facebook Filled-50.png */; };
+		1F4FBB3A1D84C4A2004FD004 /* Twitter Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4FBB391D84C4A2004FD004 /* Twitter Filled-50.png */; };
+		1F4FBB3C1D84C6F4004FD004 /* Back-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4FBB3B1D84C6F4004FD004 /* Back-50.png */; };
 		1F5EAF501D6EB0E100237D91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF4F1D6EB0E100237D91 /* AppDelegate.swift */; };
 		1F5EAF521D6EB0E100237D91 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAF511D6EB0E100237D91 /* MainViewController.swift */; };
 		1F5EAF551D6EB0E100237D91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EAF531D6EB0E100237D91 /* Main.storyboard */; };
@@ -23,6 +26,12 @@
 		1F7A91721D7B64DC00C0741D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A91711D7B64DC00C0741D /* Quote.swift */; };
 		1F7A91741D7B64E300C0741D /* QuoteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A91731D7B64E300C0741D /* QuoteList.swift */; };
 		1FB4ECDA1D8488AF00927D94 /* A little sunshine.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4ECD91D8488AF00927D94 /* A little sunshine.ttf */; };
+		1FB4ED021D84986E00927D94 /* Clock-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4ED011D84986E00927D94 /* Clock-50.png */; };
+		1FB4ED041D8498C400927D94 /* Shuffle-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4ED031D8498C400927D94 /* Shuffle-50.png */; };
+		1FB4ED061D84994D00927D94 /* Facebook-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4ED051D84994D00927D94 /* Facebook-50.png */; };
+		1FB4ED081D849AB800927D94 /* Twitter-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4ED071D849AB800927D94 /* Twitter-50.png */; };
+		1FB4ED0A1D849B2000927D94 /* Upload-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4ED091D849B2000927D94 /* Upload-50.png */; };
+		1FB4ED0C1D849BA200927D94 /* Info-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4ED0B1D849BA200927D94 /* Info-50.png */; };
 		1FF0C3771D6FE7CA0027EB49 /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +58,9 @@
 		1F49A9621D7A70D2007BCDDD /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1F49A9661D7A7350007BCDDD /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		1F49A9681D7A7681007BCDDD /* AlertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
+		1F4FBB371D84C49B004FD004 /* Facebook Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook Filled-50.png"; sourceTree = "<group>"; };
+		1F4FBB391D84C4A2004FD004 /* Twitter Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter Filled-50.png"; sourceTree = "<group>"; };
+		1F4FBB3B1D84C6F4004FD004 /* Back-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-50.png"; sourceTree = "<group>"; };
 		1F5EAF4C1D6EB0E100237D91 /* Daily Inspirational Quote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Inspirational Quote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5EAF4F1D6EB0E100237D91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F5EAF511D6EB0E100237D91 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +78,12 @@
 		1F7A91711D7B64DC00C0741D /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		1F7A91731D7B64E300C0741D /* QuoteList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteList.swift; sourceTree = "<group>"; };
 		1FB4ECD91D8488AF00927D94 /* A little sunshine.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A little sunshine.ttf"; sourceTree = "<group>"; };
+		1FB4ED011D84986E00927D94 /* Clock-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clock-50.png"; sourceTree = "<group>"; };
+		1FB4ED031D8498C400927D94 /* Shuffle-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shuffle-50.png"; sourceTree = "<group>"; };
+		1FB4ED051D84994D00927D94 /* Facebook-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook-50.png"; sourceTree = "<group>"; };
+		1FB4ED071D849AB800927D94 /* Twitter-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter-50.png"; sourceTree = "<group>"; };
+		1FB4ED091D849B2000927D94 /* Upload-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Upload-50.png"; sourceTree = "<group>"; };
+		1FB4ED0B1D849BA200927D94 /* Info-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info-50.png"; sourceTree = "<group>"; };
 		1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +177,15 @@
 			isa = PBXGroup;
 			children = (
 				1FB4ECD91D8488AF00927D94 /* A little sunshine.ttf */,
+				1FB4ED011D84986E00927D94 /* Clock-50.png */,
+				1FB4ED071D849AB800927D94 /* Twitter-50.png */,
+				1F4FBB391D84C4A2004FD004 /* Twitter Filled-50.png */,
+				1F4FBB3B1D84C6F4004FD004 /* Back-50.png */,
+				1FB4ED031D8498C400927D94 /* Shuffle-50.png */,
+				1FB4ED0B1D849BA200927D94 /* Info-50.png */,
+				1F4FBB371D84C49B004FD004 /* Facebook Filled-50.png */,
+				1FB4ED091D849B2000927D94 /* Upload-50.png */,
+				1FB4ED051D84994D00927D94 /* Facebook-50.png */,
 				1FF0C3761D6FE7CA0027EB49 /* Quotes.plist */,
 			);
 			name = "Supporting Files";
@@ -268,11 +295,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB4ED041D8498C400927D94 /* Shuffle-50.png in Resources */,
 				1FB4ECDA1D8488AF00927D94 /* A little sunshine.ttf in Resources */,
 				1F5EAF5D1D6EB0E100237D91 /* LaunchScreen.storyboard in Resources */,
 				1F5EAF5A1D6EB0E100237D91 /* Assets.xcassets in Resources */,
+				1FB4ED0C1D849BA200927D94 /* Info-50.png in Resources */,
+				1F4FBB381D84C49B004FD004 /* Facebook Filled-50.png in Resources */,
 				1F5EAF551D6EB0E100237D91 /* Main.storyboard in Resources */,
+				1F4FBB3C1D84C6F4004FD004 /* Back-50.png in Resources */,
+				1FB4ED0A1D849B2000927D94 /* Upload-50.png in Resources */,
 				1FF0C3771D6FE7CA0027EB49 /* Quotes.plist in Resources */,
+				1FB4ED081D849AB800927D94 /* Twitter-50.png in Resources */,
+				1F4FBB3A1D84C4A2004FD004 /* Twitter Filled-50.png in Resources */,
+				1FB4ED061D84994D00927D94 /* Facebook-50.png in Resources */,
+				1FB4ED021D84986E00927D94 /* Clock-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
