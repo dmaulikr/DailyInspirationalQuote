@@ -131,25 +131,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijw-et-hTb">
-                                <rect key="frame" x="286" y="41" width="29" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJt-MZ-inz">
-                                <rect key="frame" x="26" y="37" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJt-MZ-inz">
+                                <rect key="frame" x="18" y="27" width="50" height="50"/>
+                                <state key="normal" image="Back-50.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="MEs-Be-Jy7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijw-et-hTb">
+                                <rect key="frame" x="280" y="56" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ijw-et-hTb" firstAttribute="baseline" secondItem="BJt-MZ-inz" secondAttribute="baseline" id="56R-Ky-UFq"/>
                             <constraint firstItem="BJt-MZ-inz" firstAttribute="top" secondItem="puc-vu-Ine" secondAttribute="bottom" constant="17" id="A7k-lu-krx"/>
-                            <constraint firstItem="ijw-et-hTb" firstAttribute="centerX" secondItem="Q7c-X8-HnY" secondAttribute="centerX" id="E35-xu-JxU"/>
+                            <constraint firstItem="ijw-et-hTb" firstAttribute="centerX" secondItem="Q7c-X8-HnY" secondAttribute="centerX" id="YiE-TW-JQ3"/>
                             <constraint firstItem="BJt-MZ-inz" firstAttribute="leading" secondItem="Q7c-X8-HnY" secondAttribute="leadingMargin" constant="6" id="vZH-AA-yjW"/>
                         </constraints>
                     </view>
@@ -170,21 +169,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Get inspired every day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-Ul-IFh">
-                                <rect key="frame" x="152" y="32" width="171" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwe-G1-Wna">
-                                <rect key="frame" x="20" y="28" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwe-G1-Wna">
+                                <rect key="frame" x="12" y="18" width="50" height="50"/>
+                                <state key="normal" image="Back-50.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="pBh-W6-cwv"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-sp-cro">
                                 <rect key="frame" x="531" y="105" width="51" height="31"/>
+                                <color key="onTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="alertSwitchAction:" destination="djy-xu-l4k" eventType="valueChanged" id="uKm-wk-wHM"/>
                                 </connections>
@@ -192,34 +186,40 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIc-8l-sad">
                                 <rect key="frame" x="12" y="110" width="124" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-tI-nMh">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-tI-nMh">
                                 <rect key="frame" x="0.0" y="148" width="600" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="494604000.94057697">
                                     <!--2016-09-03 14:00:00 +0000-->
                                 </date>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Get inspired every day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtC-LM-yDc">
+                                <rect key="frame" x="150" y="47" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Muw-tI-nMh" firstAttribute="top" secondItem="Qwe-G1-Wna" secondAttribute="bottom" constant="90" id="125-Qm-Rr5"/>
-                            <constraint firstItem="Muw-tI-nMh" firstAttribute="centerX" secondItem="hzX-Ul-IFh" secondAttribute="centerX" id="2gZ-8f-NlB"/>
                             <constraint firstItem="TIc-8l-sad" firstAttribute="leading" secondItem="syy-rx-Ppt" secondAttribute="leadingMargin" constant="-8" id="3uw-nV-yMp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dfL-sp-cro" secondAttribute="trailing" id="Ihp-Od-pAe"/>
                             <constraint firstItem="dfL-sp-cro" firstAttribute="top" secondItem="PzH-gJ-YRY" secondAttribute="bottom" constant="85" id="KtN-Rv-2ZU"/>
                             <constraint firstItem="TIc-8l-sad" firstAttribute="top" secondItem="PzH-gJ-YRY" secondAttribute="bottom" constant="90" id="PYy-yt-NPP"/>
                             <constraint firstItem="Muw-tI-nMh" firstAttribute="leading" secondItem="syy-rx-Ppt" secondAttribute="leading" id="PqT-gQ-IEj"/>
+                            <constraint firstItem="Muw-tI-nMh" firstAttribute="centerX" secondItem="syy-rx-Ppt" secondAttribute="centerX" id="SFN-1a-sYE"/>
                             <constraint firstItem="Qwe-G1-Wna" firstAttribute="top" secondItem="PzH-gJ-YRY" secondAttribute="bottom" constant="8" id="ald-n1-wod"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Qwe-G1-Wna" secondAttribute="leading" id="b6W-Y9-Lgj"/>
-                            <constraint firstItem="hzX-Ul-IFh" firstAttribute="baseline" secondItem="Qwe-G1-Wna" secondAttribute="baseline" id="eoq-zN-alX"/>
-                            <constraint firstItem="hzX-Ul-IFh" firstAttribute="centerX" secondItem="syy-rx-Ppt" secondAttribute="centerX" id="kfb-nZ-odu"/>
+                            <constraint firstItem="DtC-LM-yDc" firstAttribute="centerX" secondItem="syy-rx-Ppt" secondAttribute="centerX" id="q8w-HA-acG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="alertPicker" destination="Muw-tI-nMh" id="cRm-cg-4e4"/>
                         <outlet property="alertSwitch" destination="dfL-sp-cro" id="mX0-Ze-7eh"/>
+                        <outlet property="backButton" destination="Qwe-G1-Wna" id="gXU-7c-BZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTR-gm-EyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,6 +228,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back-50.png" width="50" height="50"/>
         <image name="Clock-50.png" width="50" height="50"/>
         <image name="Facebook Filled-50.png" width="50" height="50"/>
         <image name="Info-50.png" width="50" height="50"/>
@@ -236,6 +237,6 @@
         <image name="Upload-50.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pBh-W6-cwv"/>
+        <segue reference="MEs-Be-Jy7"/>
     </inferredMetricsTieBreakers>
 </document>

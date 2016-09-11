@@ -269,7 +269,10 @@ class MainViewController: UIViewController {
     }
     
     func formatiPhone() {
-        NSLog("Format iPhone")        
+        NSLog("Format iPhone")
+        //alertsButton.imageEdgeInsets = UIEdgeInsetsMake(45, 45, 45, 45)
+        //randomButton.imageEdgeInsets = UIEdgeInsetsMake(45, 45, 45, 45)
+        
 
     }
     
