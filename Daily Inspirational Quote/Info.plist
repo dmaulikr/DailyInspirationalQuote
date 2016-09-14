@@ -29,6 +29,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>A little sunshine.ttf</string>
+		<string>girls.ttf</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

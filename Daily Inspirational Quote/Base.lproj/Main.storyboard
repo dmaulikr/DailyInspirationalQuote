@@ -20,20 +20,21 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxK-wJ-Jln">
                                 <rect key="frame" x="59" y="140" width="482" height="320"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.65132004310344827" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s18-OQ-cvO">
                                 <rect key="frame" x="488" y="18" width="50" height="50"/>
-                                <state key="normal" image="Shuffle-50.png"/>
+                                <state key="normal" image="Recurring Appointment Filled-50.png"/>
                                 <connections>
                                     <action selector="getNewRandomQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2YJ-G7-gdp"/>
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXd-67-zDY">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.6524784482758621" colorSpace="calibratedWhite"/>
                                 <items>
                                     <barButtonItem id="dUg-au-0d1"/>
                                     <barButtonItem style="plain" id="Qgx-lq-puW">
@@ -73,7 +74,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CpX-LP-5p3">
                                             <rect key="frame" x="530" y="-3" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="Info-50.png"/>
+                                            <state key="normal" image="More Filled-50.png"/>
                                             <connections>
                                                 <segue destination="9zS-3K-kKj" kind="show" id="jd3-CL-6v6"/>
                                             </connections>
@@ -83,13 +84,12 @@
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-yb-kFb">
                                 <rect key="frame" x="58" y="10" width="50" height="50"/>
-                                <state key="normal" image="Clock-50.png"/>
+                                <state key="normal" image="Alarm Clock Filled-50.png"/>
                                 <connections>
                                     <segue destination="djy-xu-l4k" kind="show" id="Ay7-g5-abk"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="s18-OQ-cvO" secondAttribute="trailing" constant="39" id="61C-hc-3rg"/>
                             <constraint firstItem="SLh-yb-kFb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="6Ug-sl-YZv"/>
@@ -105,6 +105,7 @@
                             <constraint firstItem="RxK-wJ-Jln" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="oCm-Ce-c0t"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AQH-Zh-RdE"/>
                     <connections>
                         <outlet property="alertsButton" destination="SLh-yb-kFb" id="Ner-fH-qFt"/>
                         <outlet property="fbButtonItem" destination="Qgx-lq-puW" id="lqb-jr-hyq"/>
@@ -133,7 +134,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJt-MZ-inz">
                                 <rect key="frame" x="18" y="27" width="50" height="50"/>
-                                <state key="normal" image="Back-50.png"/>
+                                <state key="normal" image="Circled Left 2-50.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="MEs-Be-Jy7"/>
                                 </connections>
@@ -145,7 +146,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BJt-MZ-inz" firstAttribute="top" secondItem="puc-vu-Ine" secondAttribute="bottom" constant="17" id="A7k-lu-krx"/>
                             <constraint firstItem="ijw-et-hTb" firstAttribute="centerX" secondItem="Q7c-X8-HnY" secondAttribute="centerX" id="YiE-TW-JQ3"/>
@@ -171,14 +172,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwe-G1-Wna">
                                 <rect key="frame" x="12" y="18" width="50" height="50"/>
-                                <state key="normal" image="Back-50.png"/>
+                                <state key="normal" image="Circled Left 2-50.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="pBh-W6-cwv"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-sp-cro">
                                 <rect key="frame" x="531" y="105" width="51" height="31"/>
-                                <color key="onTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="alertSwitchAction:" destination="djy-xu-l4k" eventType="valueChanged" id="uKm-wk-wHM"/>
                                 </connections>
@@ -190,19 +190,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-tI-nMh">
-                                <rect key="frame" x="0.0" y="148" width="600" height="216"/>
+                                <rect key="frame" x="0.0" y="184" width="600" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="494604000.94057697">
                                     <!--2016-09-03 14:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Get inspired every day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtC-LM-yDc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Be inspired every day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtC-LM-yDc">
                                 <rect key="frame" x="150" y="47" width="171" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7U-9M-bAP">
+                                <rect key="frame" x="0.0" y="151" width="600" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNY-Tt-MTb">
+                                <rect key="frame" x="0.0" y="410" width="600" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tpy-1P-zwJ">
+                                <rect key="frame" x="0.0" y="91" width="600" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Muw-tI-nMh" firstAttribute="top" secondItem="Qwe-G1-Wna" secondAttribute="bottom" constant="90" id="125-Qm-Rr5"/>
                             <constraint firstItem="TIc-8l-sad" firstAttribute="leading" secondItem="syy-rx-Ppt" secondAttribute="leadingMargin" constant="-8" id="3uw-nV-yMp"/>
@@ -228,11 +240,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back-50.png" width="50" height="50"/>
-        <image name="Clock-50.png" width="50" height="50"/>
+        <image name="Alarm Clock Filled-50.png" width="50" height="50"/>
+        <image name="Circled Left 2-50.png" width="50" height="50"/>
         <image name="Facebook Filled-50.png" width="50" height="50"/>
-        <image name="Info-50.png" width="50" height="50"/>
-        <image name="Shuffle-50.png" width="50" height="50"/>
+        <image name="More Filled-50.png" width="50" height="50"/>
+        <image name="Recurring Appointment Filled-50.png" width="50" height="50"/>
         <image name="Twitter Filled-50.png" width="50" height="50"/>
         <image name="Upload-50.png" width="50" height="50"/>
     </resources>
